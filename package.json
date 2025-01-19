@@ -1,0 +1,20 @@
+{
+  "name": "datastructuresjs",
+  "version": "1.0.0",
+  "description": "JavaScript Data Structures Implementation with Tests and Benchmarks",
+  "main": "benchmark.js",
+  "scripts": {
+    "test": "jest",
+    "benchmark": "node benchmark.js"
+  },
+  "keywords": [
+    "data-structures",
+    "algorithms",
+    "javascript"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

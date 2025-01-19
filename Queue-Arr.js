@@ -23,14 +23,3 @@ class Queue {
 }
 
 module.exports = Queue;
-
-// Example usage:
-const myQueue = new Queue();
-myQueue.enqueue('Google');
-myQueue.enqueue('Udemy');
-myQueue.enqueue('Discord');
-myQueue.dequeue();
-myQueue.dequeue();
-myQueue.dequeue();
-
-console.log(myQueue);

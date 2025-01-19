@@ -22,7 +22,7 @@ class BinarySearchTree {
         let currentNode = this.root;
         while (true) {
             if (value === currentNode.value) {
-                return this; // Avoid duplicates
+                return this;
             }
             if (value < currentNode.value) {
                 if (!currentNode.left) {
@@ -67,7 +67,6 @@ class BinarySearchTree {
         let currentNode = this.root;
         let parentNode = null;
 
-        // Find the node to remove and its parent
         while (currentNode) {
             if (value < currentNode.value) {
                 parentNode = currentNode;
@@ -76,9 +75,6 @@ class BinarySearchTree {
                 parentNode = currentNode;
                 currentNode = currentNode.right;
             } else {
-                // We found the node to remove
-
-                // Option 1: No right child
                 if (!currentNode.right) {
                     if (!parentNode) {
                         this.root = currentNode.left;
@@ -90,7 +86,6 @@ class BinarySearchTree {
                         }
                     }
                 }
-                // Option 2: Right child doesn't have a left child
                 else if (!currentNode.right.left) {
                     currentNode.right.left = currentNode.left;
                     if (!parentNode) {
@@ -103,7 +98,6 @@ class BinarySearchTree {
                         }
                     }
                 }
-                // Option 3: Right child has a left child
                 else {
                     let leftmost = currentNode.right.left;
                     let leftmostParent = currentNode.right;
@@ -134,15 +128,3 @@ class BinarySearchTree {
 }
 
 module.exports = BinarySearchTree;
-
-// Example usage:
-const tree = new BinarySearchTree();
-tree.insert(9);
-tree.insert(4);
-tree.insert(6);
-tree.insert(20);
-tree.insert(170);
-tree.insert(15);
-tree.insert(1);
-
-console.log(JSON.stringify(tree, null, 2));

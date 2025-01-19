@@ -1,6 +1,6 @@
 const HashTable = require('./Hash-Map');
 const Stack = require('./Stack-Arr');
-const StackLL = require('./Stack-ll');
+const StackLL = require('./Stack-LL');
 const LinkedList = require('./Linked-List');
 const CircularLinkedList = require('./Circular-Linked-List');
 const QueueArray = require('./Queue-Arr');
@@ -11,7 +11,6 @@ function runBenchmark() {
   const results = [];
   const iterations = 100000;
 
-  // Benchmark HashTable
   console.log('\nRunning HashTable benchmark...');
   const hashTable = new HashTable(iterations);
   const hashTableStart = performance.now();
@@ -21,7 +20,6 @@ function runBenchmark() {
   const hashTableTime = performance.now() - hashTableStart;
   results.push({ structure: 'HashTable', time: hashTableTime });
 
-  // Benchmark Stack (Array)
   console.log('Running Stack (Array) benchmark...');
   const stack = new Stack();
   const stackStart = performance.now();
@@ -31,7 +29,6 @@ function runBenchmark() {
   const stackTime = performance.now() - stackStart;
   results.push({ structure: 'Stack (Array)', time: stackTime });
 
-  // Benchmark Stack (LinkedList)
   console.log('Running Stack (LinkedList) benchmark...');
   const stackLL = new StackLL();
   const stackLLStart = performance.now();
@@ -41,7 +38,6 @@ function runBenchmark() {
   const stackLLTime = performance.now() - stackLLStart;
   results.push({ structure: 'Stack (LinkedList)', time: stackLLTime });
 
-  // Benchmark Queue (Array)
   console.log('Running Queue (Array) benchmark...');
   const queueArr = new QueueArray();
   const queueArrStart = performance.now();
@@ -51,7 +47,6 @@ function runBenchmark() {
   const queueArrTime = performance.now() - queueArrStart;
   results.push({ structure: 'Queue (Array)', time: queueArrTime });
 
-  // Benchmark Queue (LinkedList)
   console.log('Running Queue (LinkedList) benchmark...');
   const queueLL = new QueueLL();
   const queueLLStart = performance.now();
@@ -61,7 +56,6 @@ function runBenchmark() {
   const queueLLTime = performance.now() - queueLLStart;
   results.push({ structure: 'Queue (LinkedList)', time: queueLLTime });
 
-  // Benchmark LinkedList
   console.log('Running LinkedList benchmark...');
   const linkedList = new LinkedList(0);
   const linkedListStart = performance.now();
@@ -71,7 +65,6 @@ function runBenchmark() {
   const linkedListTime = performance.now() - linkedListStart;
   results.push({ structure: 'LinkedList', time: linkedListTime });
 
-  // Benchmark CircularLinkedList
   console.log('Running CircularLinkedList benchmark...');
   const circularList = new CircularLinkedList(0);
   const circularListStart = performance.now();
@@ -81,7 +74,6 @@ function runBenchmark() {
   const circularListTime = performance.now() - circularListStart;
   results.push({ structure: 'CircularLinkedList', time: circularListTime });
 
-  // Benchmark BST
   console.log('Running Binary Search Tree benchmark...');
   const bst = new BST();
   const bstStart = performance.now();
@@ -91,7 +83,6 @@ function runBenchmark() {
   const bstTime = performance.now() - bstStart;
   results.push({ structure: 'Binary Search Tree', time: bstTime });
 
-  // Sort and print results
   results.sort((a, b) => a.time - b.time);
   console.log('\nPerformance Rankings (adding 100,000 items):');
   console.log('----------------------------------------');

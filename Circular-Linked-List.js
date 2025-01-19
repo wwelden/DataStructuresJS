@@ -91,13 +91,3 @@ class CircularLinkedList {
 }
 
 module.exports = CircularLinkedList;
-
-// Example usage:
-const myList = new CircularLinkedList(10);
-myList.append(5);
-myList.append(16);
-myList.prepend(1);
-myList.insert(2, 99);
-console.log(myList.printList()); // [1, 10, 99, 5, 16]
-myList.remove(2);
-console.log(myList.printList()); // [1, 10, 5, 16]

@@ -1,4 +1,4 @@
-const StackLL = require('./stack-ll');
+const StackLL = require('./Stack-LL');
 
 describe('StackLL', () => {
     let stackLL;

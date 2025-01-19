@@ -21,13 +21,3 @@ class Stack {
 }
 
 module.exports = Stack;
-
-const myStack = new Stack();
-myStack.push('Google');
-myStack.push('Udemy');
-myStack.push('Discord');
-myStack.pop();
-myStack.pop();
-myStack.pop();
-
-console.log(myStack);

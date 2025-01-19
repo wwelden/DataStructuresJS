@@ -62,12 +62,3 @@ class HashTable {
 }
 
 module.exports = HashTable;
-
-// Example usage:
-const myHashTable = new HashTable(50);
-myHashTable.set('grapes', 10000);
-myHashTable.set('apples', 54);
-myHashTable.set('oranges', 2);
-console.log(myHashTable.get('grapes')); // 10000
-console.log(myHashTable.keys()); // ['grapes', 'apples', 'oranges']
-console.log(myHashTable.remove('apples')); // 54
